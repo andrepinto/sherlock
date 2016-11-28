@@ -1,0 +1,20 @@
+{
+  "service":{
+    "name":"my-service",
+    "version":"v0.1.0",
+    "description":"{{ if .MYVAR }}localhost{{ else }}{{ .CONSUL }}{{ end }}:8500"
+  },
+  "api":{
+    "port":8989
+  },
+  "dependencies":[
+    {
+      "name":"auth",
+      "version":"v0.1.0"
+    },
+    {
+      "name":"core",
+      "version":"v0.1.0"
+    }
+  ]
+}
